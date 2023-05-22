@@ -9,6 +9,10 @@ let page = 1;
 
 const searchImages = async (e) => {
   e.preventDefault();
+  if (searchEle.value === "") {
+    alert("please provide some input!");
+    return;
+  }
   inputData = searchEle.value;
   const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accessKey}`;
   // console.log(url);
