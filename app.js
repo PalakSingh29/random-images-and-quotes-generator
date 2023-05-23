@@ -3,8 +3,20 @@ const quoteBtn = document.getElementById("quote-btn");
 const quoteContainer = document.getElementById("quote");
 const imageContainer = document.getElementById("image");
 const mainBody = document.getElementById("mainBody");
+const logo = document.getElementById("logo");
 
 imageBtn.addEventListener("click", () => {
+  imageContainer.classList.add("block");
+  imageContainer.classList.remove("hidden");
+
+  quoteContainer.classList.add("hidden");
+  quoteContainer.classList.remove("block");
+
+  mainBody.classList.add("bg-purple-200");
+  mainBody.classList.remove("bg-blue-200");
+});
+
+logo.addEventListener("click", () => {
   imageContainer.classList.add("block");
   imageContainer.classList.remove("hidden");
 
