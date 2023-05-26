@@ -10,14 +10,7 @@ const getQuotes = (e) => {
     fetch(URL)
       .then((response) => response.json())
       .then((quotes) => {
-        shuffle(quotes);
-        let output = "";
-
-        for (let i = 0; i <= quotes.length; i++) {
-          if (i == number.value) {
-            break;
-          }
-          output += `
+        shuffle(q
                         <li class="py-2"><strong>Quote:</strong> ${quotes[i].text}</li>
                         <li class="py-2"><strong>Author:</strong> ${quotes[i].author}</li>
                         <br/>
